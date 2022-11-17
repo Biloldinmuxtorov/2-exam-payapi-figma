@@ -1,0 +1,133 @@
+.header {
+    position: relative;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+    &__logo-link{
+        margin-right: 64px;
+    }
+    &__menu {
+        display: none;
+        width: 28px;
+        height: 17px;
+        background-color: transparent;
+        border: none;
+        background-image: url(../../images/menuButoon.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__close {
+        display: none;
+        width: 23px;
+        height: 22px;
+        background-color: transparent;
+        border: none;
+        background-image: url(../../images/closeButton.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__demo {
+        @include demoButton();
+    }
+
+    &__wrapper {
+        display: flex;
+        max-width: 911px;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    &__link {
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: $blue;
+        margin-right: 40px;
+        opacity: 0.7;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: $blue-black;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__logo-link {
+            margin-right: 64px;
+        }
+
+        &__demo {
+            padding: 15px 24px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .header {
+        &__logo-link {
+            margin-right: 0;
+        }
+        &__menu{
+            display: inline-block;
+        }
+
+        &__wrapper {
+            display: none;
+            transform: translateX(100%);
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            background-color: $blue-black;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 40px 28px;
+        }
+
+        &__wrapper--on{
+            transform: translateX(0);
+        }
+
+        &__close {
+            align-self: flex-end;
+            display: inline-block;
+        }
+
+        &__nav {
+            width: 100%;
+            margin-top: 24px;
+            border-top: 1px solid $white;
+            padding-top: 43px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__link {
+            text-align: center;
+            font-size: 20px;
+            line-height: 24px;
+            margin: 0;
+            margin-bottom: 32px;
+            color: $white;
+        }
+
+        &__demo {
+            padding: 15px 37px;
+        }
+    }
+}

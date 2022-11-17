@@ -1,0 +1,33 @@
+.status {
+    &__list {
+        display: flex;
+        margin-top: 72px;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 350px;
+        padding: 16px 0;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: $blue;
+        mix-blend-mode: normal;
+        opacity: 0.7;
+    }
+
+    &__title {
+        font-family: 'DM Serif Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 72px;
+        letter-spacing: -0.430769px;
+        color: $pink;
+    }
+}

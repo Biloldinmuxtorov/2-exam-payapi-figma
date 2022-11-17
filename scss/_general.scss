@@ -1,0 +1,43 @@
+$pink: #ba4270;
+$white: #fbfcfe;
+$blue: #36536b;
+$blue-black: #1b262f;
+$pink-active: #da6d97;
+$blue-grey: #6c8294;
+$body-background: #edf3f8;
+
+
+
+body {
+    background-color: $body-background;
+    font-family: 'Public Sans';
+    background-color: #edf3f8;
+}
+
+.container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}

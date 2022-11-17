@@ -1,0 +1,98 @@
+.companies {
+    background-color: $blue-black;
+
+    &__container {
+        display: flex;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+
+    &__title {
+        font-family: 'DM Serif Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.369231px;
+        color: #FBFCFE;
+    }
+
+    &__text {
+        max-width: 445px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 28px;
+        color: #FBFCFE;
+        mix-blend-mode: normal;
+        opacity: 0.7;
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+    &__link{
+        @include blackButton;
+    }
+
+    &__right{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        
+        .right__box{
+            margin: 30px;
+            &:nth-child(3), &:last-child{
+                margin-right: 0;
+            }
+            &:nth-child(4),
+            &:nth-child(5),
+            &:last-child{
+                margin-top: 39px;
+            }
+            &:nth-child(5){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .companies{
+        &__container{
+            padding-bottom: 88px;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__left{
+            margin-top: 64px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__text{
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 525px){
+    .companies{
+        &__right{
+            grid-template-columns: auto auto;
+            justify-content: center;
+            .right__box{
+                &:nth-child(3){
+                    margin-top: 39px;
+                }
+            }
+        }
+        &__title{
+            font-size: 32px;
+            line-height: 36px;
+        }
+        &__text{
+            max-width: 327px;
+        }
+    }
+}
